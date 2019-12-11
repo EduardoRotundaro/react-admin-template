@@ -25,15 +25,15 @@ export default props => {
                         >
                             {item.name}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                             {getDropdownItems(item.ref)}
                         </div>
                     </li>
                 );
             else
                 return (
-                    <li class="nav-item active">
-                        <a class="nav-link" href={item.ref}>{item.name}</a>
+                    <li className="nav-item active">
+                        <a className="nav-link" href={item.ref}>{item.name}</a>
                     </li>
                 );
         });
@@ -41,8 +41,8 @@ export default props => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href={}>
-                <img src={} alt="Logo" className="navbar-logo"/>
+            <a className="navbar-brand" href={props.homeRef}>
+                <img src={props.logoSrc} alt="Logo" className="navbar-logo"/>
             </a>
             <button className="navbar-toggler" 
                 type="button" 
