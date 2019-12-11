@@ -1,5 +1,9 @@
 $react: #61dafb;
 
-h2{
+@mixin clr-react {
     color: $react;
+}
+
+h2{
+    @include clr-react;
 }
