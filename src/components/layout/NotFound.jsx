@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Router from './router';
-
 export default props => (
-    <Router/>
+    <h2>404</h2>
 );
