@@ -1,10 +1,11 @@
 export const NAVBAR = [
-    { name: '', ref: '' },
-    { 
-        name: '', 
-        ref: [
-            { name: '', ref: '' },
-            { name: '', ref: '' }
-        ]
-    },
+    { name: 'Home', ref: '/' },
+    { name: 'Dashboard', ref: '/dashboard' }
+    // { 
+    //     name: '', 
+    //     ref: [
+    //         { name: '', ref: '' },
+    //         { name: '', ref: '' }
+    //     ]
+    // },
 ];

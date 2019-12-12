@@ -1,4 +1,7 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+
+import logo from '../../assets/images/logo.svg';
 
 export default props => {
 
@@ -10,13 +13,13 @@ export default props => {
     ));   
 
     function getMainItems () {
-        const items = props.navItens || [];
-        return items.map(item => {
+        const items = props.navItems || [];
+        return items.map((item, index) => {
             if(Array.isArray(item.ref))
                 return (
-                    <li className="nav-item dropdown">
+                    <li key={`nav_${index}`} className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" 
-                            href="#" 
+                            href="/" 
                             id="navbarDropdown" 
                             role="button" 
                             data-toggle="dropdown" 
@@ -32,8 +35,8 @@ export default props => {
                 );
             else
                 return (
-                    <li className="nav-item active">
-                        <a className="nav-link" href={item.ref}>{item.name}</a>
+                    <li key={`nav_${index}`} className="nav-item active">
+                        <Link className="nav-link" to={item.ref}>{item.name}</Link>
                     </li>
                 );
         });
@@ -41,9 +44,9 @@ export default props => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href={props.homeRef}>
-                <img src={props.logoSrc} alt="Logo" className="navbar-logo"/>
-            </a>
+            <Link className="navbar-brand" to="/">
+                <img src={logo} height="30" alt="Logo" className="navbar-logo"/>
+            </Link>
             <button className="navbar-toggler" 
                 type="button" 
                 data-toggle="collapse" 

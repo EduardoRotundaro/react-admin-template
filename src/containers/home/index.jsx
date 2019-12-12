@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default props => (
-    <span className="badge badge-success">Success</span>
+    <h2>Home</h2>
 );
