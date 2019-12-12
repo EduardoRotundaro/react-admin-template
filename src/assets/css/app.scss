@@ -1,9 +1,29 @@
+@import 'bootstrap/scss/bootstrap.scss';
+
+@import 'common.scss';
+@import 'extra-small.scss';
+@import 'small.scss';
+@import 'medium.scss';
+@import 'large.scss';
+@import 'extra-large.scss';
+
+//Examples
 $react: #61dafb;
 
 @mixin clr-react {
     color: $react;
 }
 
-h2{
+span{
     @include clr-react;
+}
+
+span{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+span{
+    @extend .shadow-sm;
 }
